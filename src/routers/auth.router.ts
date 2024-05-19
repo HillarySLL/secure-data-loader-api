@@ -18,7 +18,7 @@ authRouter.post(
       }
     
       const payload = {userId: user.id, email: user.email};
-      const token = jwt.sign(payload, jwtSecret, {expiresIn: "1h"});
+      const token = jwt.sign(payload, jwtSecret, {expiresIn: "5h"});
       res.status(200).json({token});
     } catch (error) {
       next(error);
