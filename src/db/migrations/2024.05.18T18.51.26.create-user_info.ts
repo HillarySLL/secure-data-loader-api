@@ -6,7 +6,7 @@ export const up: Migration = async (params) => {
       id SERIAL PRIMARY KEY, 
       name VARCHAR(255) NOT NULL,
       email VARCHAR(255) NOT NULL UNIQUE,
-      age INTEGER CHECK(age > 0),
+      age INTEGER
     );`
   );
 };
