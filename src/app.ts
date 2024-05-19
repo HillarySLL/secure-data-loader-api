@@ -13,7 +13,7 @@ if (process.env["NODE_ENV"]!== "test") {
 export const app = express();
 
 let corsOptions = {
-  origin: ["http://localhost:5173"],
+  origin: process.env["CLIENT_ORIGIN"],
 }
 
 app.use(cors(corsOptions));
