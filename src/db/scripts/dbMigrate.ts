@@ -31,6 +31,3 @@ const migrator = new Umzug({
 export type Migration = typeof migrator._types.migration;
 
 migrator.runAsCLI().then(() => pool.end());
-
-console.log("Migration files path:", path.join(__dirname, "..", "migrations", "*.ts"));
-console.log("Storage file path:", path.join(__dirname, "..", "migrations", "migrations.json"));
