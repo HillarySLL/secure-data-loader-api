@@ -11,7 +11,6 @@ export const pool = new Pool({
 });
 
 export const query = (text: string, params?: (string | number | boolean)[]) => {
-  console.log({ text, params });
   return pool.query(text, params);
 };
 

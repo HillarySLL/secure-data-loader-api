@@ -1,7 +1,7 @@
 import "dotenv/config";
 import path from "node:path";
 import fs from "node:fs";
-import { query } from "..";
+import { query, pool } from "..";
 import { JSONStorage, Umzug } from "umzug";
 
 const migrator = new Umzug({
@@ -28,4 +28,4 @@ const migrator = new Umzug({
 
 export type Migration = typeof migrator._types.migration;
 
-migrator.runAsCLI();
+migrator.runAsCLI().then(() => pool.end());
