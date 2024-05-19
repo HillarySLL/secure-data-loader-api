@@ -31,4 +31,3 @@ const migrator = new Umzug({
 export type Migration = typeof migrator._types.migration;
 
 migrator.runAsCLI().then(() => pool.end());
-
