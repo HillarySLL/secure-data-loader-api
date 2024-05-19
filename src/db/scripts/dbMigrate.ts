@@ -4,11 +4,13 @@ import fs from "node:fs";
 import { query, pool } from "..";
 import { JSONStorage, Umzug } from "umzug";
 
+const migrationsFile: string = process.env["MIGRATIONS_FILE"] || "migrations.json";
+
 const migrator = new Umzug({
   migrations: { glob: path.join(__dirname, "..", "migrations", "*.ts") },
   context: { query },
   storage: new JSONStorage({
-    path: path.join(__dirname, "..", "migrations", "migrations.json"),
+    path: path.join(__dirname, "..", "migrations", migrationsFile),
   }),
   logger: console,
   create: {
@@ -29,3 +31,6 @@ const migrator = new Umzug({
 export type Migration = typeof migrator._types.migration;
 
 migrator.runAsCLI().then(() => pool.end());
+
+console.log("Migration files path:", path.join(__dirname, "..", "migrations", "*.ts"));
+console.log("Storage file path:", path.join(__dirname, "..", "migrations", "migrations.json"));
