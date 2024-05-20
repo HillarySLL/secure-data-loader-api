@@ -10,8 +10,8 @@
 
 - [Instalación](#instalación)
 - [Uso](#uso)
-- []
-
+- [Características](#caracteristicas)
+- [Producción](producción)
 ## Instalación
 
 ### Prerrequisitos
