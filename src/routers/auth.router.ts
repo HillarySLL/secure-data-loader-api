@@ -10,7 +10,7 @@ export const authRouter = Router();
 authRouter.get(
   "/login",
   (_req, res) => {
-    res.redirect(`/authentication/login`);
+    res.redirect(`/login`);
   }
 )
 
