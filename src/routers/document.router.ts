@@ -92,9 +92,6 @@ documentRouter.post(
             }
           });
 
-          // TODO: Crear tabla user_info (name, email, age).
-          // TODO: Registrar registros exitosos en la DB.
-
           const response = {
             ok: true,
             records: {
