@@ -1,15 +1,11 @@
 import { Router } from "express";
 import jwt from "jsonwebtoken";
 import { ApiError } from "../middlewares/error";
-import { validateCredentials } from "../services/auth.service"; 
+import { validateCredentials } from "../services/auth.service";
 
 const jwtSecret = "secret";
 
 export const authRouter = Router();
-
-authRouter.get('/login', (_req, res) => {
-  res.send('Login page');
-});
 
 authRouter.post(
   "/login",

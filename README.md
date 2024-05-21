@@ -66,6 +66,12 @@ Para iniciar la aplicación en modo desarrollo:
 npm run dev
 ```
 
+Para agregar un usuario de prueba con email `admin@example.com` y password `admin`, ejcutar el siguiente comando:
+
+```bash
+npm run db:seed
+```
+
 ## Caracteristicas
 
 - Autenticación: Sistema de inicio de sesión seguro.
