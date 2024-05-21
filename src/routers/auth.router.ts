@@ -7,6 +7,10 @@ const jwtSecret = "secret";
 
 export const authRouter = Router();
 
+authRouter.get('/login', (_req, res) => {
+  res.send('Login page');
+});
+
 authRouter.post(
   "/login",
   async (req, res, next) => {
